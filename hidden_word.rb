@@ -4,29 +4,28 @@ class HiddenWord
 
   def initialize(hidden_word)
     @hidden_word = hidden_word
-    @display = [] #turn this into an array
+    @display = ""
 
   end
 
-  # def get_display()
-  #   return @display
-  # end
+  def get_display()
+    return @display
+  end
 
   def hide_word(hidden_word)
     counter = hidden_word.length #6
     @display = "*" * counter
+    @display.split("")
   end
 
-
-  def word_to_array(hidden_word)
-    hidden_word_array = hidden_word.split("")
+  def replace_letter(guessed_letter)
+    index = 0
+    for letter in @hidden_word.split("")
+      if letter == guessed_letter
+          @display[index] = guessed_letter
+      end
+      index += 1
+    end
   end
 
-
-  # def get_display(guessed_letter)
-  #   for each_letter in
-  #     if each_letter == guessed_letter
-  #       hidden_word_array #this will require hidden word to be an array
-  #
-  #   end
 end
