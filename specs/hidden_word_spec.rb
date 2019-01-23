@@ -5,7 +5,7 @@ require_relative("../hidden_word")
 class HiddenWordTest < MiniTest::Test
 
   def setup()
-    @hidden_word = HiddenWord.new("banana", "******")
+    @hidden_word = HiddenWord.new("banana")
   end
 
   def test_can_create_hidden_word()
@@ -17,7 +17,7 @@ class HiddenWordTest < MiniTest::Test
   end
 
   def test_get_display()
-    assert_equal("******",@hidden_word.display)
+    assert_equal([],@hidden_word.get_display())
   end
 
 end

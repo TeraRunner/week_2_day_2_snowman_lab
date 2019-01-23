@@ -9,4 +9,6 @@ class Game
     @guessed_letters = guessed_letters
   end
 
+
+
 end
