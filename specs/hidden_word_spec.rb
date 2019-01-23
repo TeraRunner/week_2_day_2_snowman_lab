@@ -16,6 +16,10 @@ class HiddenWordTest < MiniTest::Test
     assert_equal("banana",@hidden_word.hidden_word)
   end
 
+  def test_hide_word()
+    assert_equal("******",@hidden_word.hide_word(@hidden_word.hidden_word))
+  end
+
   def test_hidden_word_to_array()
     word = @hidden_word.hidden_word
     assert_equal(["b","a","n","a","n","a"],@hidden_word.word_to_array(word))
