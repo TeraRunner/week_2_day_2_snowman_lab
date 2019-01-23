@@ -34,6 +34,7 @@ class HiddenWordTest < MiniTest::Test
   def test_letter_is_here
     result = @hidden_word.letter_is_here("a")
     assert_equal(true, result)
+    assert_equal(false, !result)
   end
 
 end

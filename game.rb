@@ -6,9 +6,15 @@ class Game
   def initialize(player,hidden_word,guessed_letters)
     @player = player
     @hidden_word = hidden_word
-    @guessed_letters = guessed_letters
+    @guessed_letters = []
   end
 
+  def guessed_letter(guessed_letter)
+    return guessed_letter
+  end
 
+  def letters_on_the_array(guessed_letter(letter))
+    @guessed_letters << guessed_letter
+  end
 
 end
