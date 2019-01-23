@@ -16,8 +16,18 @@ class HiddenWordTest < MiniTest::Test
     assert_equal("banana",@hidden_word.hidden_word)
   end
 
-  def test_get_display()
-    assert_equal([],@hidden_word.get_display())
+  def test_hidden_word_to_array()
+    word = @hidden_word.hidden_word
+    assert_equal(["b","a","n","a","n","a"],@hidden_word.word_to_array(word))
   end
+
+  # def test_get_display()
+  #   assert_equal([],@hidden_word.get_display())
+  # end
+  # def test_get_display()
+  #   guessed_letter = "n"
+  #   assert_equal("**n*n*",@hidden_word.get_display(guessed_letter)
+  # end
+
 
 end
