@@ -22,9 +22,17 @@ class HiddenWord
     index = 0
     for letter in @hidden_word.split("")
       if letter == guessed_letter
-          @display[index] = guessed_letter
+        @display[index] = guessed_letter
       end
       index += 1
+    end
+  end
+
+  def letter_is_here(guessed_letter)
+    if @hidden_word.include?(guessed_letter)
+      true
+    else
+      false
     end
   end
 

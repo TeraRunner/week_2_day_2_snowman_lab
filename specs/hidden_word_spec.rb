@@ -31,5 +31,9 @@ class HiddenWordTest < MiniTest::Test
     assert_equal("*a*a*a",@hidden_word.get_display())
   end
 
+  def test_letter_is_here
+    result = @hidden_word.letter_is_here("a")
+    assert_equal(true, result)
+  end
 
 end
